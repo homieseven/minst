@@ -49,37 +49,146 @@ def main():
     test_label = all_labels[41000:42000]
 
 
-    model = models.Sequential()
-    model.add(layers.Conv2D(32, (3, 3), input_shape=(28, 28, 1)))
-    #model.add(layers.normalization.BatchNormalization())
-    model.add(layers.Activation("relu"))
+    #1 - 0.046999341943479524, 0.989
+    # model = models.Sequential()
+    # model.add(layers.Conv2D(32, (3, 3), input_shape=(28, 28, 1)))
+    # #model.add(layers.normalization.BatchNormalization())
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Conv2D(32, (3, 3)))
+    # #model.add(layers.normalization.BatchNormalization())
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Conv2D(64, (3, 3)))
+    # #model.add(layers.normalization.BatchNormalization())
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Conv2D(64, (3, 3)))
+    # #model.add(layers.normalization.BatchNormalization())
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Flatten())
+    # # Fully connected layer
+    # model.add(layers.Dense(512))
+    # #model.add(layers.normalization.BatchNormalization())
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Dense(10, activation='softmax'))
 
-    model.add(layers.Conv2D(32, (3, 3)))
-    #model.add(layers.normalization.BatchNormalization())
-    model.add(layers.Activation("relu"))
+    #2 - 0.03971657040917034, 0.994
+    # model = models.Sequential()
+    # model.add(layers.Conv2D(32, (3, 3), input_shape=(28, 28, 1)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Conv2D(32, (3, 3)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Conv2D(64, (3, 3)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Conv2D(64, (3, 3)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Flatten())
+    # # Fully connected layer
+    # model.add(layers.Dense(1024))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Dense(10, activation='softmax'))
 
-    model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #3 - 0.01563, 0.994
+    # model = models.Sequential()
+    # model.add(layers.Conv2D(32, (3, 3), input_shape=(28, 28, 1)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Conv2D(64, (3, 3)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Flatten())
+    # # Fully connected layer
+    # model.add(layers.Dense(1024))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Dense(10, activation='softmax'))
 
-    model.add(layers.Conv2D(64, (3, 3)))
-    #model.add(layers.normalization.BatchNormalization())
-    model.add(layers.Activation("relu"))
-
-    model.add(layers.Conv2D(64, (3, 3)))
-    #model.add(layers.normalization.BatchNormalization())
-    model.add(layers.Activation("relu"))
-
-    model.add(layers.MaxPooling2D(pool_size=(2, 2)))
-
-    model.add(layers.Flatten())
-    # Fully connected layer
-    model.add(layers.Dense(512))
-    #model.add(layers.normalization.BatchNormalization())
-    model.add(layers.Activation("relu"))
-
-    model.add(layers.Dense(10, activation='softmax'))
+    #4 -  0.09612 - 0.98
+    # model = models.Sequential()
+    # model.add(layers.Conv2D(32, (3, 3), input_shape=(28, 28, 1)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Flatten())
+    # # Fully connected layer
+    # model.add(layers.Dense(1024))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Dense(10, activation='softmax'))
 
 
-    model.compile(optimizer='adamax', loss='categorical_crossentropy', metrics=['accuracy'])
+    #5 - 0.0604024, 0.989
+    # model = models.Sequential()
+    # model.add(layers.Conv2D(32, (5, 5), input_shape=(28, 28, 1)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Flatten())
+    # # Fully connected layer
+    # model.add(layers.Dense(1024))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Dense(10, activation='softmax'))
+
+    # 6 - 0.072134, 0.99
+    # model = models.Sequential()
+    # model.add(layers.Conv2D(32, (3, 3), input_shape=(28, 28, 1)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Conv2D(64, (3, 3)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Flatten())
+    # # Fully connected layer
+    # model.add(layers.Dense(1024))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Dense(10, activation='softmax'))
+
+    #7 - 0.042227, 0.991
+    # model = models.Sequential()
+    # model.add(layers.Conv2D(32, (3, 3), input_shape=(28, 28, 1)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Conv2D(64, (3, 3)))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+    #
+    # model.add(layers.Flatten())
+    # # Fully connected layer
+    # model.add(layers.Dense(1024))
+    # model.add(layers.Activation("relu"))
+    #
+    # model.add(layers.Dense(10, activation='softmax'))
+    #
+    # model.compile(optimizer='adamax', loss='categorical_crossentropy', metrics=['accuracy'])
+
+
 
 
     start_time = time.time()
